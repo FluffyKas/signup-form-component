@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+
+/* COLOURS */
+
+/* PRIMARY COLOURS */
+
+--clr-primary-red: hsl(0, 100%, 74%);
+--clr-primary-green: hsl(154, 59%, 51%);
+
+/* ACCENT COLOURS */
+
+--clr-accent-blue: hsl(248, 32%, 49%);
+
+/* NEUTRAL COLOURS */
+
+--clr-neutral-darkblue: hsl(249, 10%, 26%);
+--clr-neutral-grayblue: hsl(246, 25%, 77%);
+
+/* FONTS */
+
+  --ff-main: 'Poppins', sans-serif;
+
+}
+
+/* GENERAL STYLES */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  background: url(images/bg-intro-mobile.png);
+  background-color: var(--clr-primary-red);
+}
+
+.container {
+  font-family: var(--ff-main);
+  color: white;
+  text-align: center;
+  padding-inline: 1.5em;
+  padding-block: 5.5em;
+  max-width: 550px;
+  margin: 0 auto;
+}
+
+/* HERO SECTION */
+
+.hero {
+  margin-block-end: 4em;
+}
+
+.hero__title {
+  font-size: 1.7rem;
+  margin-block-end: .7em;
+}
+
+.hero__body {
+  font-size: .98rem;
+  font-weight: 400;
+  line-height: 1.7;
+  width: 95%;
+  margin: 0 auto;
+}
+
+/* SIGNUP SECTION */
+
+.cta {
+  background: var(--clr-accent-blue);
+  border-radius: 10px;
+  box-shadow: 0 8px 0 0 hsla(0, 56%, 61%, 0.7);
+  padding: 1.2em;
+  margin-block-end: 1.5em;
+}
+
+.cta__body {
+  font-size: .96rem;
+  font-weight: 300;
+  line-height: 1.7;
+  padding-inline: 2em;
+}
+
+.cta__body span {
+  font-weight: 600;
+}
+
+.signup {
+  background: white;
+  padding: 1.5em;
+  border-radius: 10px;
+  box-shadow: 0 8px 0 0 hsla(0, 56%, 61%, 0.7);
+}
+
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.form-components {
+  position: relative;
+}
+
+.form-components input {
+  display: block;
+  width: 100%;
+  font-family: inherit;
+  font-size: .9rem;
+  font-weight: 600;
+  padding: 1em;
+  border: 1px solid rgb(221, 220, 220);
+  border-radius: 5px;
+}
+
+.form-components i {
+  position: absolute;
+  right: 1rem;
+  visibility: hidden;
+  font-size: 1.3rem;
+}
+
+.form-components p {
+  color: var(--clr-primary-red);
+  font-weight: 500;
+  font-size: .65rem;
+  font-style: italic;
+  text-align: right;
+  visibility: hidden;
+}
+
+.signup-form button {
+  all: unset;
+  background: var(--clr-primary-green);
+  display: block;
+  padding: 1em;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-weight: 500;
+  cursor: pointer;
+  box-shadow: 0 4px 0 0 hsl(154, 57%, 45%);
+  margin-block-end: 1.5em;
+  opacity: 1;
+  transition: all .2s ease;
+}
+
+.signup-form button:hover {
+  opacity: .8;
+}
+
+/* SUCCESS/ERROR STATE STYLES */
+
+.form-components.success input {
+  border: 2px solid var(--clr-primary-green);
+}
+
+.form-components.error input {
+  border: 2px solid var(--clr-primary-red);
+}
+
+.form-components.error i,
+.form-components.success i {
+  top: 1.2rem;
+}
+
+.form-components.success i.fa-check-circle {
+  visibility: visible;
+  color: var(--clr-primary-green);
+}
+
+.form-components.error i.fa-exclamation-circle {
+  visibility: visible;
+  color: var(--clr-primary-red);
+}
+
+.form-components.error p {
+  visibility: visible;
+  padding-block: .5em .9em;
+}
+
+/* TERMS & CONDITIONS */
+
+.terms {
+  color: var(--clr-neutral-grayblue);
+  font-size: .67rem;
+  line-height: 2;
+  padding-inline: 1.5em;
+}
+
+.terms a,
+.terms a:active {
+  color: var(--clr-primary-red);
+  text-decoration: none;
+  font-weight: 700;
+  opacity: 1;
+  transition: all .2s ease;
+}
+
+.terms a:hover {
+  opacity: .8;
+}
+
+/* MEDIA QUERIES */
+
+@media (min-width: 960px) {
+  
+  body {
+    background: url(images/bg-intro-desktop.png);
+    background-color: var(--clr-primary-red);
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 80%;
+    place-items: center;
+    min-height: 100vh;
+  }
+
+  .hero {
+    text-align: left;
+    padding-inline-end: 2rem;
+  }
+
+  .hero__title {
+    font-size: 3rem;
+    line-height: 1.1;
+  }
+
+  .hero__body {
+    width: 100%;
+  }
+
+  .signup-side {
+    min-width: 500px;
+  }
+
+}
+
