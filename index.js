@@ -4,7 +4,6 @@ const lastName = document.getElementById("lastName");
 const email = document.getElementById("email");
 const password = document.getElementById("password");
  
-//listening for "submit", executing actions based on input values
 form.addEventListener("submit", e => {
   e.preventDefault();
 
@@ -75,7 +74,7 @@ function setSuccessFor(input) {
 };
 
 
-//checking email input whether it's valid or not
+//checking email input validity
 function isItEmail (email) {
   return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
 };
