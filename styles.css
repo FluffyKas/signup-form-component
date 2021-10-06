@@ -43,20 +43,19 @@ body {
   font-family: var(--ff-main);
   margin: 0 auto;
   max-width: 550px;
-  padding-block: 5.5em;
-  padding-inline: 1.5em;
+  padding: 5.5em 1.5em;
   text-align: center;
 }
 
 /* HERO SECTION */
 
 .hero {
-  margin-block-end: 4em;
+  margin-bottom: 4em;
 }
 
 .hero__title {
   font-size: 1.7rem;
-  margin-block-end: .7em;
+  margin-bottom: .7em;
 }
 
 .hero__body {
@@ -73,7 +72,7 @@ body {
   background: var(--clr-accent-blue);
   border-radius: 10px;
   box-shadow: 0 8px 0 0 hsla(0, 56%, 61%, 0.7);
-  margin-block-end: 1.5em;
+  margin-bottom: 1.5em;
   padding: 1.2em;
 }
 
@@ -81,7 +80,8 @@ body {
   font-size: .96rem;
   font-weight: 300;
   line-height: 1.7;
-  padding-inline: 2em;
+  padding-left: 2em;
+  padding-right: 2em;
 }
 
 .cta__body span {
@@ -157,7 +157,7 @@ body {
   cursor: pointer;
   display: block;
   font-weight: 500;
-  margin-block-end: 1.5em;
+  margin-bottom: 1.5em;
   opacity: 1;
   padding: 1em;
   text-transform: uppercase;
@@ -211,7 +211,8 @@ body {
 }
 
 .form-components.error p {
-  padding-block: .5em .9em;
+  padding-top: .5em;
+  padding-bottom: .9em;
   visibility: visible;
 }
 
@@ -221,7 +222,8 @@ body {
   color: var(--clr-neutral-grayblue);
   font-size: .67rem;
   line-height: 2;
-  padding-inline: 1.5em;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
 }
 
 .terms a,
@@ -272,7 +274,7 @@ body {
   }
 
   .hero {
-    padding-inline-end: 2rem;
+    padding-right: 2rem;
     text-align: left;
   }
 
