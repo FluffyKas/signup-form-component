@@ -116,6 +116,23 @@ body {
   width: 100%;
 }
 
+.form-components input:focus {
+  /* Provides a fallback style for browsers
+     that don't support :focus-visible */
+  outline: 3px dotted var(--clr-primary-red);
+}
+
+.form-components input:focus:not(:focus-visible) {
+  /* Removes the focus indicator on mouse-focus for browsers
+     that do s  upport :focus-visible */
+  outline: none;
+}
+
+.form-components input:focus-visible {
+  /* for browsers that do support :focus-visible */
+  outline: 3px dotted var(--clr-primary-red);
+}
+
 .form-components i {
   font-size: 1.3rem;
   position: absolute;
@@ -149,6 +166,23 @@ body {
 
 .signup-form button:hover {
   opacity: .8;
+}
+
+.signup-form button:focus {
+  /* Provides a fallback style for browsers
+     that don't support :focus-visible */
+  outline: 4px dotted var(--clr-primary-red);
+}
+
+.signup-form button:focus:not(:focus-visible) {
+  /* Removes the focus indicator on mouse-focus for browsers
+     that do s  upport :focus-visible */
+  outline: none;
+}
+
+.signup-form button:focus-visible {
+  /* for browsers that do support :focus-visible */
+  outline: 4px dotted var(--clr-primary-red);
 }
 
 /* SUCCESS/ERROR STATE STYLES */
@@ -201,6 +235,23 @@ body {
 
 .terms a:hover {
   opacity: .8;
+}
+
+.terms a:focus {
+  /* Provides a fallback style for browsers
+     that don't support :focus-visible */
+  outline: 3px dotted var(--clr-primary-green);
+}
+
+.terms a:focus:not(:focus-visible) {
+  /* Removes the focus indicator on mouse-focus for browsers
+     that do s  upport :focus-visible */
+  outline: none;
+}
+
+.terms a:focus-visible {
+  /* for browsers that do support :focus-visible */
+  outline: 3px dotted var(--clr-primary-green);
 }
 
 /* MEDIA QUERIES */
